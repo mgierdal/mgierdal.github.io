@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Protocols :: MAM injection calculator</title>
+
+
+  <meta name="generator" content="amaya 7.2, see http://www.w3.org/Amaya/" />
+
+</head>
+
+
+
+<body>
+
+<script>
+function validate() {};
+function calculate() {
+var ret;
+ret = document.mamForm.dose.value * document.mamForm.weight.value;
+ret = ret / document.mamForm.density.value; document.mamForm.inject.value = Math.round(ret*10)/10;
+};
+</script>
+<form name="mamForm" method="get" action="">
+  <table>
+
+    <caption>MAM injections</caption> <tbody>
+
+      <tr>
+
+        <td style="text-align: right;">density</td>
+
+        <td>
+        <p><input size="4" name="density" value="1.17" type="text" /></p>
+
+        </td>
+
+        <td style="text-align: right;">mg/&micro;l</td>
+
+        <td></td>
+
+        <td style="text-align: right;">weight</td>
+
+        <td>
+        <p><input size="5" name="weight" value="1.000" type="text" /></p>
+
+        </td>
+
+        <td>kg</td>
+
+      </tr>
+
+      <tr>
+
+        <td style="text-align: right;">dose</td>
+
+        <td>
+        <p><input size="4" name="dose" value="16" type="text" /></p>
+
+        </td>
+
+        <td>mg/kg</td>
+
+        <td></td>
+
+        <td style="text-align: right;">inject</td>
+
+        <td>
+        <p><input size="4" name="inject" value="16" disabled="disabled" type="text" /></p>
+
+        </td>
+
+        <td>&micro;l of MAM</td>
+
+      </tr>
+
+      <tr>
+
+        <td></td>
+
+        <td></td>
+
+        <td></td>
+
+        <td>
+        <p style="text-align: center;"> <input value="CALCULATE" onclick="calculate()" type="button" /></p>
+
+        </td>
+
+        <td></td>
+
+        <td></td>
+
+        <td></td>
+
+      </tr>
+
+      <tr>
+
+        <td></td>
+
+        <td></td>
+
+        <td></td>
+
+        <td> 
+        <p style="text-align: center;"> <input name="Reset" type="reset" /></p>
+
+        </td>
+
+        <td></td>
+
+      </tr>
+
+    </tbody>
+  </table>
+
+</form>
+
+</body>
+</html>
